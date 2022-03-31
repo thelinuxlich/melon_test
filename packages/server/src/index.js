@@ -60,22 +60,12 @@ const server = createServer({
 await server.start()
 
 const run = async () => {
-  await listenForMessages(
-    async (
-      /** @type {string} key */
-      key,
-      /** @type {string} streamId */
-      streamId,
-      /** @type {{value: number}} data */
-      data
-    ) => {
-      if (key === 'addCurrency') {
-        /** @type {number} */
-        const value = await client.incrby('global_currency', data.value)
-        pubSub.publish('currency', value)
-      }
+  await listenForMessages(async (key, streamId, { value }) => {
+    if (key === 'addCurrency') {
+      const _value = await client.incrby('global_currency', value)
+      pubSub.publish('currency', _value)
     }
-  )
+  })
   await run()
 }
 

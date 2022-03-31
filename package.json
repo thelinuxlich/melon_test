@@ -11,7 +11,7 @@
     "start:frontend": "pnpm run dev --filter=frontend",
     "test": "vitest",
     "test:once": "vitest run",
-    "check": "tsc -p jsconfig.json",
+    "check": "tsc -p jsconfig.json --maxNodeModuleJsDepth 0",
     "lint": "eslint packages/**/*.{js,ts}",
     "build": "vite build -c vitest.config.js",
     "format": "prettier --write '**/*.{ts,js}'",

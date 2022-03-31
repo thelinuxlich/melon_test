@@ -36,6 +36,7 @@ module.exports = {
     '@typescript-eslint/no-unsafe-call': 'off',
     '@typescript-eslint/unbound-method': 'off',
     '@typescript-eslint/no-floating-promises': 'off',
+    'typescript-eslint/await-thenable': 'off',
   },
   settings: {
     jsdoc: {

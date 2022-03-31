@@ -19,6 +19,7 @@
   "include": [
     "packages/server/src/*.js",
     "packages/server/src/*.ts",
+    "packages/server/src/*.d.ts",
     "packages/frontend/src/*.js",
     "packages/frontend/src/*.ts",
     "packages/frontend/src/*.jsx",
