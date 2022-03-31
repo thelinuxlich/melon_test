@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "target": "esnext" /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */,
+    "module": "esnext",
+    "moduleResolution": "Node" /* Specify what module code is generated. */,
+    "allowJs": true,
+    "checkJs": true,
+    "noEmit": true,
+    "jsx": "preserve",
+    "jsxImportSource": "solid-js",
+    "types": ["vitest/globals", "vitest/importMeta", "vite/client"],
+    "esModuleInterop": true /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables `allowSyntheticDefaultImports` for type compatibility. */,
+    "forceConsistentCasingInFileNames": true /* Ensure that casing is correct in imports. */,
+    "strict": true /* Enable all strict type-checking options. */,
+    "skipLibCheck": true /* Skip type checking all .d.ts files. */,
+    "skipDefaultLibCheck": true
+  },
+  "exclude": ["coverage", "docs", "node_modules"],
+  "include": [
+    "packages/server/src/*.js",
+    "packages/server/src/*.ts",
+    "packages/frontend/src/*.js",
+    "packages/frontend/src/*.ts",
+    "packages/frontend/src/*.jsx",
+    "packages/frontend/src/*.svg",
+    "packages/frontend/src/*.css",
+    "vitest.config.js",
+    "packages/frontend/vite.config.js",
+    ".eslintrc.cjs"
+  ],
+  "typedocOptions": {
+    "entryPoints": ["packages/server/src/index.js"],
+    "out": "docs",
+    "internalNamespace": "types"
+  }
+}
